@@ -1,18 +1,18 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Books
 
-> One paragraph statement about the project.
+> Basic website that allows users to add/remove books from a list.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./AwesomeBooks.png)
 
-Additional description about the project and its features.
+Using JavaScript objects and arrays.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- Plain HTML 
+- Basic UI
 
 ## Live Demo
 
@@ -21,39 +21,31 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- Clone the repository using:
+```shell
+   git clone git@github.com:Cathella/Awesome-Books.git
+``` 
+- cd Awesome-Books
 
+- Install Visual Studio extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-To get a local copy up and running follow these simple example steps.
+- Enable Live Server
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Add and remove Books!
 
 ## Authors
 
-👤 **Author1**
+👤 **Nakitto Catherine**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Cathella](https://github.com/Cathella)
+- Twitter: [@cathella9](https://twitter.com/cathella9)
+- LinkedIn: [Nakitto Catherine](https://www.linkedin.com/in/nakitto-catherine2020/)
 
-👤 **Author2**
+👤 **Manuel Aldaraca**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@vicmaburrito](https://github.com/vicmaburrito)
+- Twitter: [@ManuelAldaraca](https://twitter.com/twitterhandle)
+- LinkedIn: [ Manuel Aldaraca ](https://www.linkedin.com/in/manuelaldaraca/)
 
 ## 🤝 Contributing
 
@@ -65,11 +57,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
