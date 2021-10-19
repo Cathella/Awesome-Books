@@ -10,6 +10,29 @@ class Book {
 // class display - handles all functions that interact with the browser view
 class Display {
 
+	// display books
+	static displayBooks = () => {
+		const books = Store.getBooks();
+		books.forEach((book) => Display.addBookToList(book));
+	};
+	
+	// add submit book to browser view
+	static addBookToList = (book) => {
+		const list = document.getElementById('bookList');
+
+		const row = document.createElement('div');
+		row.innerHTML = `
+			<div>
+			<div>${book.title}</div>
+			<div>${book.author}</div>
+			<div hidden>${book.id}</div>
+			<button class="delete">Remove</button>
+			<hr>
+			</div>
+		`;
+
+		list.appendChild(row);
+	};
 }
 
 // class store - handles all functions that interact with localstorage
@@ -49,30 +72,6 @@ class Store {
 	};
 }
 
-// add submit book to browser view
-const addBookToList = (book) => {
-  const list = document.getElementById('bookList');
-
-  const row = document.createElement('div');
-  row.innerHTML = `
-    <div>
-    <div>${book.title}</div>
-    <div>${book.author}</div>
-    <div hidden>${book.id}</div>
-    <button class="delete">Remove</button>
-    <hr>
-    </div>
-  `;
-
-  list.appendChild(row);
-};
-
-// display books
-const displayBooks = () => {
-  const books = Store.getBooks();
-  books.forEach((book) => addBookToList(book));
-};
-
 // remove book from browser view
 const deleteBook = (el) => {
   if (el.classList.contains('delete'));
@@ -81,7 +80,7 @@ const deleteBook = (el) => {
 
 // display books list on window load
 window.addEventListener('DOMContentLoaded', () => {
-  displayBooks();
+  Display.displayBooks();
 });
 
 // Add book Event
@@ -93,7 +92,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
   const id = `${title}${author}`;
 
   const book = new Book(id, title, author);
-  addBookToList(book);
+  Display.addBookToList(book);
   Store.addBook(book);
 });
 
