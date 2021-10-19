@@ -1,4 +1,4 @@
-// book class and constructor
+// book class - represents a book
 class Book {
   constructor(id, title, author) {
     this.id = id;
@@ -7,22 +7,32 @@ class Book {
   }
 }
 
-// get books from localstorage
-const getBooks = () => {
-  let books;
+// class display - handles all functions that interact with the browser view
+class Display {
 
-  if (localStorage.getItem('books') === null) {
-    books = [];
-  } else {
-    books = JSON.parse(localStorage.getItem('books'));
-  }
+}
 
-  return books;
-};
+// class store - handles all functions that interact with localstorage
+class Store {
+	
+	// get books from localstorage
+	static getBooks = () => {
+		let books;
+
+		if (localStorage.getItem('books') === null) {
+			books = [];
+		} else {
+			books = JSON.parse(localStorage.getItem('books'));
+		}
+
+		return books;
+	};
+}
+
 
 // function to add a new book to the collection, with title and author.
 const addBook = (book) => {
-  const books = getBooks();
+  const books = Store.getBooks();
   books.push(book);
   localStorage.setItem('books', JSON.stringify(books));
 };
@@ -47,7 +57,7 @@ const addBookToList = (book) => {
 
 // display books
 const displayBooks = () => {
-  const books = getBooks();
+  const books = Store.getBooks();
   books.forEach((book) => addBookToList(book));
 };
 
@@ -59,7 +69,7 @@ const deleteBook = (el) => {
 
 // delete book from local storage
 const removeBook = (id) => {
-  const books = getBooks();
+  const books = Store.getBooks();
 
   books.forEach((book, index) => {
     if (book.id === id) {
