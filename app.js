@@ -36,7 +36,7 @@ const addBookToList = (book) => {
     <div>
     <div>${book.title}</div>
     <div>${book.author}</div>
-    <div class="hidden">${book.id}</div>
+    <div hidden>${book.id}</div>
     <button class="delete">Remove</button>
     <hr>
     </div>
