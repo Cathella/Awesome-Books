@@ -27,15 +27,27 @@ class Store {
 
 		return books;
 	};
+	
+	// function to add a new book to the collection, with title and author.
+	static addBook = (book) => {
+		const books = Store.getBooks();
+		books.push(book);
+		localStorage.setItem('books', JSON.stringify(books));
+	};
+	
+	// delete book from local storage
+	static removeBook = (id) => {
+		const books = Store.getBooks();
+
+		books.forEach((book, index) => {
+			if (book.id === id) {
+				books.splice(index, 1);
+			}
+		});
+
+		localStorage.setItem('books', JSON.stringify(books));
+	};
 }
-
-
-// function to add a new book to the collection, with title and author.
-const addBook = (book) => {
-  const books = Store.getBooks();
-  books.push(book);
-  localStorage.setItem('books', JSON.stringify(books));
-};
 
 // add submit book to browser view
 const addBookToList = (book) => {
@@ -67,19 +79,6 @@ const deleteBook = (el) => {
   el.parentElement.remove();
 };
 
-// delete book from local storage
-const removeBook = (id) => {
-  const books = Store.getBooks();
-
-  books.forEach((book, index) => {
-    if (book.id === id) {
-      books.splice(index, 1);
-    }
-  });
-
-  localStorage.setItem('books', JSON.stringify(books));
-};
-
 // display books list on window load
 window.addEventListener('DOMContentLoaded', () => {
   displayBooks();
@@ -95,11 +94,11 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
   const book = new Book(id, title, author);
   addBookToList(book);
-  addBook(book);
+  Store.addBook(book);
 });
 
 // To remove a book event
 document.getElementById('bookList').addEventListener('click', (e) => {
   deleteBook(e.target);
-  removeBook(e.target.previousElementSibling.textContent);
+  Store.removeBook(e.target.previousElementSibling.textContent);
 });
