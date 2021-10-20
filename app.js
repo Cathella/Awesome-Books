@@ -27,7 +27,7 @@ class Book {
 
   // add submitted book to browser view
   static addBookToList = (book) => {
-    const list = document.getElementById('bookList');
+    const list = document.getElementById('books-data');
 
     const row = document.createElement('div');
     row.innerHTML = `
@@ -89,7 +89,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
 });
 
 // To remove a book event
-document.getElementById('bookList').addEventListener('click', (e) => {
+document.getElementById('books-data').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
   Book.removeBook(e.target.previousElementSibling.textContent);
 });
