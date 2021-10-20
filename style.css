@@ -35,7 +35,7 @@ button {
   all: unset;
   border: 3px solid black;
   border-radius: 5%;
-  padding: 0.2em 0.4rem;
+  padding: 0.2em 0.5rem;
   box-shadow: 4px 3px black;
   background: white;
   cursor: pointer;
@@ -47,7 +47,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 
 h2 {
@@ -55,8 +55,18 @@ h2 {
   margin-bottom: 30px;
 }
 
+h2 span {
+  border-top: 2px solid black;
+  padding-top: 0.5em;
+}
+
 input {
   border: 2px solid black;
   margin-bottom: 18px;
   height: 45px;
+  padding-left: 15px;
+}
+
+form button {
+  align-self: flex-end;
 }
