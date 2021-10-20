@@ -33,6 +33,11 @@ class Display {
 
 		list.appendChild(row);
 	};
+
+  static deleteBook = (el) => {
+    if (el.classList.contains('delete'));
+    el.parentElement.remove();
+  };
 }
 
 // class store - handles all functions that interact with localstorage
@@ -72,12 +77,6 @@ class Store {
 	};
 }
 
-// remove book from browser view
-const deleteBook = (el) => {
-  if (el.classList.contains('delete'));
-  el.parentElement.remove();
-};
-
 // display books list on window load
 window.addEventListener('DOMContentLoaded', () => {
   Display.displayBooks();
@@ -98,6 +97,6 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
 // To remove a book event
 document.getElementById('bookList').addEventListener('click', (e) => {
-  deleteBook(e.target);
+  Display.deleteBook(e.target);
   Store.removeBook(e.target.previousElementSibling.textContent);
 });
