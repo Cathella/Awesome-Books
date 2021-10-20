@@ -28,18 +28,15 @@ class Book {
   // add submitted book to browser view
   static addBookToList = (book) => {
     const list = document.getElementById('books-data');
-
+    const button = document.createElement('button');
     const li = document.createElement('li');
     li.innerHTML = `
-      <div>
-      <div>${book.title}</div>
-      <div>${book.author}</div>
-      <div hidden>${book.id}</div>
-      <button class="delete">Remove</button>
-      <hr>
-      </div>
-    `;
-
+   <p>"${book.title}" by ${book.author}</p>
+   <div hidden>${book.id}</div>`;
+    list.append(li);
+    li.append(button);
+    button.setAttribute('class', 'delete');
+    button.textContent = 'Delete';
     list.appendChild(li);
   };
 
