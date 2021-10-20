@@ -29,8 +29,8 @@ class Book {
   static addBookToList = (book) => {
     const list = document.getElementById('books-data');
 
-    const row = document.createElement('div');
-    row.innerHTML = `
+    const li = document.createElement('li');
+    li.innerHTML = `
       <div>
       <div>${book.title}</div>
       <div>${book.author}</div>
@@ -40,7 +40,7 @@ class Book {
       </div>
     `;
 
-    list.appendChild(row);
+    list.appendChild(li);
   };
 
   // delete book from the browser view
