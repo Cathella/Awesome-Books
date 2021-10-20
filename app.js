@@ -5,9 +5,23 @@ class Book {
     this.title = title;
     this.author = author;
   }
+
+	// get books from localstorage
+	static getBooks = () => {
+		let books;
+
+		if (localStorage.getItem('books') === null) {
+			books = [];
+		} else {
+			books = JSON.parse(localStorage.getItem('books'));
+		}
+
+		return books;
+	};
+
 	// display books
 	static displayBooks = () => {
-		const books = Store.getBooks();
+		const books = Book.getBooks();
 		books.forEach((book) => Book.addBookToList(book));
 	};
 	
@@ -34,19 +48,6 @@ class Book {
     if (el.classList.contains('delete'));
     el.parentElement.remove();
   };
-
-	// get books from localstorage
-	static getBooks = () => {
-		let books;
-
-		if (localStorage.getItem('books') === null) {
-			books = [];
-		} else {
-			books = JSON.parse(localStorage.getItem('books'));
-		}
-
-		return books;
-	};
 	
 	// function to add a new book to the collection, with title and author.
 	static addBook = (book) => {
@@ -57,7 +58,7 @@ class Book {
 	
 	// delete book from local storage
 	static removeBook = (id) => {
-		const books = Store.getBooks();
+		const books = Book.getBooks();
 
 		books.forEach((book, index) => {
 			if (book.id === id) {
