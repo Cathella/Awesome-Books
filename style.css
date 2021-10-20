@@ -9,10 +9,15 @@
 
 #books-data li {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 0.1rem 1.5rem;
 }
 
 #books-data li:nth-child(odd) {
   background: rgba(128, 128, 128, 0.267);
+}
+
+p {
+  font-weight:900;
 }

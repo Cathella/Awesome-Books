@@ -31,7 +31,7 @@ class Book {
     const button = document.createElement('button');
     const li = document.createElement('li');
     li.innerHTML = `
-   <p>"${book.title}" by ${book.author}</p>
+   <p>"${book.title}"  by  ${book.author}</p>
    <div hidden>${book.id}</div>`;
     list.append(li);
     li.append(button);
