@@ -36,7 +36,7 @@ class Book {
     list.append(li);
     li.append(button);
     button.setAttribute('class', 'delete');
-    button.textContent = 'Delete';
+    button.textContent = 'Remove';
     list.appendChild(li);
   };
 
