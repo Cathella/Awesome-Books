@@ -9,14 +9,13 @@ class Book {
 
 // class display - handles all functions that interact with the browser view
 class Display {
-
 	// display books
 	static displayBooks = () => {
 		const books = Store.getBooks();
 		books.forEach((book) => Display.addBookToList(book));
 	};
 	
-	// add submit book to browser view
+	// add submitted book to browser view
 	static addBookToList = (book) => {
 		const list = document.getElementById('bookList');
 
@@ -34,6 +33,7 @@ class Display {
 		list.appendChild(row);
 	};
 
+	// delete book from the browser view
   static deleteBook = (el) => {
     if (el.classList.contains('delete'));
     el.parentElement.remove();
@@ -42,7 +42,6 @@ class Display {
 
 // class store - handles all functions that interact with localstorage
 class Store {
-	
 	// get books from localstorage
 	static getBooks = () => {
 		let books;
