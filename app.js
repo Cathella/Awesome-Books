@@ -24,7 +24,7 @@ class Book {
     const books = Book.getBooks();
     books.forEach((book) => Book.addBookToList(book));
   };
-  
+
   // add submitted book to browser view
   static addBookToList = (book) => {
     const list = document.getElementById('bookList');
@@ -48,14 +48,14 @@ class Book {
     if (el.classList.contains('delete'));
     el.parentElement.remove();
   };
-  
+
   // function to add a new book to the collection, with title and author.
   static addBook = (book) => {
     const books = Book.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   };
-  
+
   // delete book from local storage
   static removeBook = (id) => {
     const books = Book.getBooks();
