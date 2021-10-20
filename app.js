@@ -6,68 +6,68 @@ class Book {
     this.author = author;
   }
 
-	// get books from localstorage
-	static getBooks = () => {
-		let books;
+  // get books from localstorage
+  static getBooks = () => {
+    let books;
 
-		if (localStorage.getItem('books') === null) {
-			books = [];
-		} else {
-			books = JSON.parse(localStorage.getItem('books'));
-		}
+    if (localStorage.getItem('books') === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('books'));
+    }
 
-		return books;
-	};
+    return books;
+  };
 
-	// display books
-	static displayBooks = () => {
-		const books = Book.getBooks();
-		books.forEach((book) => Book.addBookToList(book));
-	};
-	
-	// add submitted book to browser view
-	static addBookToList = (book) => {
-		const list = document.getElementById('bookList');
+  // display books
+  static displayBooks = () => {
+    const books = Book.getBooks();
+    books.forEach((book) => Book.addBookToList(book));
+  };
+  
+  // add submitted book to browser view
+  static addBookToList = (book) => {
+    const list = document.getElementById('bookList');
 
-		const row = document.createElement('div');
-		row.innerHTML = `
-			<div>
-			<div>${book.title}</div>
-			<div>${book.author}</div>
-			<div hidden>${book.id}</div>
-			<button class="delete">Remove</button>
-			<hr>
-			</div>
-		`;
+    const row = document.createElement('div');
+    row.innerHTML = `
+      <div>
+      <div>${book.title}</div>
+      <div>${book.author}</div>
+      <div hidden>${book.id}</div>
+      <button class="delete">Remove</button>
+      <hr>
+      </div>
+    `;
 
-		list.appendChild(row);
-	};
+    list.appendChild(row);
+  };
 
-	// delete book from the browser view
+  // delete book from the browser view
   static deleteBook = (el) => {
     if (el.classList.contains('delete'));
     el.parentElement.remove();
   };
-	
-	// function to add a new book to the collection, with title and author.
-	static addBook = (book) => {
-		const books = Store.getBooks();
-		books.push(book);
-		localStorage.setItem('books', JSON.stringify(books));
-	};
-	
-	// delete book from local storage
-	static removeBook = (id) => {
-		const books = Book.getBooks();
+  
+  // function to add a new book to the collection, with title and author.
+  static addBook = (book) => {
+    const books = Book.getBooks();
+    books.push(book);
+    localStorage.setItem('books', JSON.stringify(books));
+  };
+  
+  // delete book from local storage
+  static removeBook = (id) => {
+    const books = Book.getBooks();
 
-		books.forEach((book, index) => {
-			if (book.id === id) {
-				books.splice(index, 1);
-			}
-		});
+    books.forEach((book, index) => {
+      if (book.id === id) {
+        books.splice(index, 1);
+      }
+    });
 
-		localStorage.setItem('books', JSON.stringify(books));
-	};
+    localStorage.setItem('books', JSON.stringify(books));
+  };
 }
 
 // display books list on window load
