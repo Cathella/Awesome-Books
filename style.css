@@ -1,5 +1,7 @@
 body {
+  /* stylelint-disable */
   font-family: 'Balsamiq Sans';
+  /* stylelint-enable */
   font-weight: 900;
   color: black;
 }
@@ -36,7 +38,7 @@ h1 {
 }
 
 p {
-  font-weight:900;
+  font-weight: 900;
 }
 
 button {
