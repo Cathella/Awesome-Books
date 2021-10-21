@@ -4,7 +4,7 @@
 
 > Basic website that allows users to add/remove books from a list.
 
-![screenshot](./AwesomeBooks.png)
+![screenshot](./Awesome_Books.png)
 
 Using JavaScript objects and arrays.
 

@@ -1,3 +1,82 @@
-.form {
-  margin: 0;
+body {
+  /* stylelint-disable */
+  font-family: 'Balsamiq Sans';
+  /* stylelint-enable */
+  font-weight: 900;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 90px;
+  font-weight: bold;
+}
+
+.box-size {
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 5px solid black;
+}
+
+#books-data {
+  padding: 0;
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+#books-data li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.1rem 1.5rem;
+}
+
+#books-data li:nth-child(odd) {
+  background: rgba(128, 128, 128, 0.267);
+}
+
+p {
+  font-weight: 900;
+}
+
+button {
+  all: unset;
+  border: 3px solid black;
+  border-radius: 5%;
+  padding: 0.2em 0.5rem;
+  box-shadow: 4px 3px black;
+  background: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 30px auto 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+h2 span {
+  border-top: 2px solid black;
+  padding-top: 0.5em;
+}
+
+input {
+  border: 2px solid black;
+  margin-bottom: 18px;
+  height: 45px;
+  padding-left: 15px;
+}
+
+form button {
+  align-self: flex-end;
 }

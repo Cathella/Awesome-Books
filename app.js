@@ -27,20 +27,17 @@ class Book {
 
   // add submitted book to browser view
   static addBookToList = (book) => {
-    const list = document.getElementById('bookList');
-
-    const row = document.createElement('div');
-    row.innerHTML = `
-      <div>
-      <div>${book.title}</div>
-      <div>${book.author}</div>
-      <div hidden>${book.id}</div>
-      <button class="delete">Remove</button>
-      <hr>
-      </div>
-    `;
-
-    list.appendChild(row);
+    const list = document.getElementById('books-data');
+    const button = document.createElement('button');
+    const li = document.createElement('li');
+    li.innerHTML = `
+   <p>"${book.title}"  by  ${book.author}</p>
+   <div hidden>${book.id}</div>`;
+    list.append(li);
+    li.append(button);
+    button.setAttribute('class', 'delete');
+    button.textContent = 'Remove';
+    list.appendChild(li);
   };
 
   // delete book from the browser view
@@ -86,10 +83,12 @@ document.getElementById('form').addEventListener('submit', (e) => {
   const book = new Book(id, title, author);
   Book.addBookToList(book);
   Book.addBook(book);
+  e.target.reset();
+  return false;
 });
 
 // To remove a book event
-document.getElementById('bookList').addEventListener('click', (e) => {
+document.getElementById('books-data').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
   Book.removeBook(e.target.previousElementSibling.textContent);
 });

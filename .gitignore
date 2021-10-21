@@ -1,2 +1,4 @@
 # .gitignore
 node_modules/
+.stylelintrc.json
+.eslintrc.json
