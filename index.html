@@ -16,19 +16,64 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>All awesome books</h1>
-  <div class="box-size">
-  <div id="books-data" class="d-flex flex-column justify-content-center align-items-center"></div>
-  </div></div><br>
-  <div>
-    <form action="" id="form">
-      <h2>Add <span>a new </span>book</h2>
-      <input type="text" placeholder="Title" id="title" onfocus="this.value=''">
-      <input type="text" placeholder="Author" id="author" onfocus="this.value=''">
-      <button type="submit">Add</button>
-    </form>
+  <nav class="container d-flex justify-content-between align-items-center mt-2">
+    <a href="#" class="logo text-dark fs-4" id="home">Awesome Books</a>
+    <div class="menu-items">
+      <a href="#" id="list-books">List</a>
+      <a href="#" id="books-form">Add New</a>
+      <a href="#" id="contact" class="border-0">Contact</a>
+    </div>
+  </nav>
+  <div class="container pt-3 d-flex justify-content-end">
+    <div id="date"></div>
   </div>
+  <section id="homeSection">
+    <h1 class="mt-5 mb-4 fw-bold text-center fs-1">Welcome to awesome books!</h1>
+  </section>
+  <section id="listSection" class="display-none">
+    <div class="container">
+      <h1 class="mt-5 mb-4 fw-bold text-center fs-1">All awesome books</h1>
+      <div class="box-size">
+        <div id="books-data" class="d-flex flex-column justify-content-center align-items-center"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="formSection" class="display-none">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <form action="" id="form">
+            <h2 class="mt-5 mb-4 fw-bold text-center fs-1">Add a new book</h2>
+            <input type="text" placeholder="Title" id="title" onfocus="this.value=''">
+            <input type="text" placeholder="Author" id="author" onfocus="this.value=''">
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contactSection" class="display-none">
+    <div class="container" id="contact">
+      <h2 class="mt-5 mb-4 fw-bold text-center fs-1">Contact Information</h2>
+      <div class="row pb-5">
+        <div class="col-lg-6 mx-auto">
+          <p>Do you have any questions or you just want to say "Hello"?<br>
+          You can even reach out to us!</p>
+          <ul>
+            <li>Our e-mail mail@mail.com</li>
+            <li>Our phone number: 0043586534422</li>
+            <li>Our address Streetname 22, 84503, City, Country</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="container py-3 mt-5 " id="copyright">
+    &copy; Copyright 2021.
+  </footer>
 
   <script src="app.js"></script>
+  <script src="https://moment.github.io/luxon/global/luxon.js"></script>
 </body>
 </html>
