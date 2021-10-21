@@ -7,16 +7,12 @@ body {
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid black;
+  border: 3px solid black;
   padding: 10px 15px;
+  margin: 0 100px;
 }
 
 .logo {
-  color: black;
-  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -31,13 +27,9 @@ nav {
   color: #0d6efd;
 }
 
-.no-border {
-  border-right: none !important;
-}
-
 h1 {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 80px;
   font-weight: bold;
 }
 
