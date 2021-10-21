@@ -109,4 +109,34 @@ const contactSection = document.getElementById('contactSection');
 
 const listLink = document.getElementById('list-books');
 const formLink = document.getElementById('books-form');
-const contact = document-getElementById('contact');
+const contactLink = document.getElementById('contact');
+
+function listLinkClick() {
+  listSection.style.display = 'flex';
+  formSection.style.display = 'none';
+  contactSection.style.display = 'none';
+  listLink.setAttribute('class', 'active');
+  formLink.setAttribute('class', 'off');
+  contactLink.setAttribute('class', 'off');
+}
+
+function formLinkClick() {
+  listSection.style.display = 'none';
+  formSection.style.display = 'block';
+  contactSection.style.display = 'none';
+  listLink.setAttribute('class', 'off');
+  formLink.setAttribute('class', 'active');
+  contactLink.setAttribute('class', 'off');
+}
+
+function contactLinkClick() {
+  listSection.style.display = 'none';
+  formSection.style.display = 'none';
+  contactSection.style.display = 'block';
+  listLink.setAttribute('class', 'off');
+  formLink.setAttribute('class', 'off');
+  contactLink.setAttribute('class', 'active');}
+
+listLink.addEventListener('click', listLinkClick);
+formLink.addEventListener('click', formLinkClick);
+contactLink.addEventListener('click', contactLinkClick);
