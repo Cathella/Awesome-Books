@@ -68,7 +68,7 @@ class Book {
 
   // show date function
   static showDate() {
-    const { DateTime } = luxon;
+    const { DateTime } = luxon; // eslint-disable-line
     const myDate = document.querySelector('#date');
     const showMyDate = document.createElement('div');
     showMyDate.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
