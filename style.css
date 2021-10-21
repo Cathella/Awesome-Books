@@ -81,3 +81,18 @@ input {
 form button {
   align-self: flex-end;
 }
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+#copyright {
+  margin: 0.5rem;
+  border: 5px solid black;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 100%;
+  font-weight: bold;
+}
