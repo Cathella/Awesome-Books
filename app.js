@@ -106,3 +106,7 @@ document.getElementById('books-data').addEventListener('click', (e) => {
 const listSection = document.getElementById('listSection');
 const formSection = document.getElementById('formSection');
 const contactSection = document.getElementById('contactSection');
+
+const listLink = document.getElementById('list-books');
+const formLink = document.getElementById('books-form');
+const contact = document-getElementById('contact');
