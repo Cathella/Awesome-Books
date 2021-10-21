@@ -102,3 +102,7 @@ document.getElementById('books-data').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
   Book.removeBook(e.target.previousElementSibling.textContent);
 });
+
+const listSection = document.getElementById('listSection');
+const formSection = document.getElementById('formSection');
+const contactSection = document.getElementById('contactSection');
