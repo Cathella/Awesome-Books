@@ -9,7 +9,6 @@ body {
 nav {
   border: 3px solid black;
   padding: 10px 15px;
-  margin: 0 100px;
 }
 
 .logo {
@@ -25,12 +24,6 @@ nav {
 
 .menu-items a.active {
   color: #0d6efd;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 80px;
-  font-weight: bold;
 }
 
 .box-size {
@@ -76,19 +69,6 @@ button {
 form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 30px auto 0;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
-h2 span {
-  border-top: 2px solid black;
-  padding-top: 0.5em;
 }
 
 input {

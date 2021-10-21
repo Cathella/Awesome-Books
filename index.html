@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="d-flex justify-content-between align-items-center">
+  <nav class="container d-flex justify-content-between align-items-center">
     <a href="#" class="logo text-dark fs-4">Awesome Books</a>
     <div class="menu-items">
       <a href="#" class="active">List</a>
@@ -25,20 +25,45 @@
     </div>
   </nav>
 
-  <h1>All awesome books</h1>
-  <div class="box-size">
-    <div id="books-data" class="d-flex flex-column justify-content-center align-items-center"></div>
+  <div class="container">
+    <h1 class="mt-5 mb-4 fw-bold text-center">All awesome books</h1>
+    <div class="box-size">
+      <div id="books-data" class="d-flex flex-column justify-content-center align-items-center"></div>
+      </div>
     </div>
   </div>
 
-  <div>
-    <form action="" id="form">
-      <h2>Add <span>a new </span>book</h2>
-      <input type="text" placeholder="Title" id="title" onfocus="this.value=''">
-      <input type="text" placeholder="Author" id="author" onfocus="this.value=''">
-      <button type="submit">Add</button>
-    </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <form action="" id="form">
+          <h2 class="mt-5 mb-4 fw-bold text-center">Add a new book</h2>
+          <input type="text" placeholder="Title" id="title" onfocus="this.value=''">
+          <input type="text" placeholder="Author" id="author" onfocus="this.value=''">
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </div>
   </div>
+
+  <div class="container" id="contact">
+    <h2 class="mt-5 mb-4 fw-bold text-center">Contact Information</h2>
+    <div class="row pb-5">
+      <div class="col-lg-6 mx-auto">
+        <p>Do you have any questions or you just want to say "Hello"?<br>
+        You can even reach out to us!</p>
+        <ul>
+          <li>Our e-mail mail@mail.com</li>
+          <li>Our phone number: 0043586534422</li>
+          <li>Our address Streetname 22, 84503, City, Country</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container py-3 mt-5 border-top text-muted">
+    &copy; Copyright 2021.
+  </footer>
 
   <script src="app.js"></script>
 </body>
