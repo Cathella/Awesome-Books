@@ -65,11 +65,21 @@ class Book {
 
     localStorage.setItem('books', JSON.stringify(books));
   };
+
+  // show date function
+  static showDate() {
+    const { DateTime } = luxon;
+    const myDate = document.querySelector('#date');
+    const showMyDate = document.createElement('div');
+    showMyDate.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+    myDate.appendChild(showMyDate);
+  }
 }
 
 // display books list on window load
 window.addEventListener('DOMContentLoaded', () => {
   Book.displayBooks();
+  Book.showDate(); // Show date
 });
 
 // Add book Event
