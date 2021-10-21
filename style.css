@@ -22,6 +22,10 @@ nav {
   text-decoration: none;
 }
 
+.display-none {
+  display: none;
+}
+
 .menu-items a.active {
   color: #0d6efd;
 }
